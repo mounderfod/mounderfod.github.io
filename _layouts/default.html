@@ -6,9 +6,9 @@
     <title>mounderfod</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/assets/index.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="timedate.js"></script>
+    <script src="/timedate.js"></script>
   </head>
   <body>
     <marquee
@@ -16,11 +16,11 @@
         The time is {} and the date is {}
       </p></marquee
     >
-    <div id="main" style="text-align: center">
-      <img class="logo" src="img/uc.png" /><br />
-      <a href="/"
-        ><h1><b>Back to homepage</b></h1></a
-      >
+    <div id="main">
+      <div class="logo-container">
+        <a href="/"><img class="logo" src="/assets/img/wordart.png" /></a><br />
+      </div>
+      <div class="box">{{content}}</div>
     </div>
   </body>
 </html>

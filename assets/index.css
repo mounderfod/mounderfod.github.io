@@ -15,7 +15,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+li {
   font-family: windows;
 }
 .field {
@@ -47,11 +48,15 @@ marquee {
   margin: auto;
 }
 
-.logo {
+.logo-container {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 30%;
+}
+
+.logo {
+  width: 100%;
 }
 
 .box {
@@ -60,10 +65,13 @@ marquee {
   width: 60%;
   text-align: center;
   margin: auto;
+  padding: 10px;
 }
 
 .box > ul {
   color: black;
+  list-style-position: inside;
+  padding: 0;
 }
 
 .box > :is(p, h1, h2, h3, h4, h5, h6) {
@@ -72,4 +80,18 @@ marquee {
 
 .box > ul > li > :is(p, h1, h2, h3, h4, h5, h6) {
   color: black;
+}
+
+pre,
+code {
+  color: green;
+  background-color: black;
+}
+
+pre {
+  padding: 5px;
+}
+
+:not(pre) > code {
+  padding: 5px;
 }
