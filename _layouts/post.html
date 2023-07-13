@@ -10,7 +10,12 @@ layout: default
     <p><em style="color: gray">{{page.date | date: "%-d %B %Y"}}</em></p>
 </time>
 <p class="p-summary" style="display: none;">{{post.excerpt | strip_html | truncatewords: 20}}</p>
-<a rel="author" class="p-author h-card" style="display: none;" href="…">mounderfod</a>
+<span rel="author" class="h-card p-author" style="display: none;">
+    <p class="p-nickname">mounderfod</p>
+    <p class="p-given-name">Noah</p>
+    <a class="u-url" rel="me" href="https://mounderfod.online"></a>
+    <p class="p-country-name">United Kingdom</p>
+  </span>
 {% for tag in page.tags %}
 <p class="p-category" style="display: none;">{{tag}}</p>
 {% endfor %}
