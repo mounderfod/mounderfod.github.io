@@ -2,9 +2,8 @@
 layout: post
 title: Enter The Fediverse
 date: 2023-07-11T16:56:14.690Z
-tags: [fediverse]
-categories: [Fediverse]
----
+tags: [fediverse, tech]
+--- 
 
 If you haven't heard, Reddit is in [a bit of a pickle](https://www.nbcnews.com/tech/tech-news/reddit-protest-blackout-ceo-steve-huffman-moderators-rcna89544). In short, they have changed their API pricing in such a way as to effectively make it impossible for 3rd party apps to continue, presumably in order to improve that sweet ad revenue (a move probably inspired by [Twitter's](https://www.engadget.com/twitter-shut-off-its-free-api-and-its-breaking-a-lot-of-apps-222011637.html)). In any case, the lack of Reddit for a few days (and my general dissatisfaction with the platform at that time) led me to explore alternatives, which led me to [Lemmy](https://join-lemmy.org), a finding which would cause me to dive much deeper into a much wider thing - the Fediverse. This article will explore this process and how I've found it so far.
 

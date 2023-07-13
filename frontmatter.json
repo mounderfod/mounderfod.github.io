@@ -56,9 +56,10 @@
     }
   ],
   "frontMatter.taxonomy.tags": [
-    "fediverse"
+    "blog",
+    "fediverse",
+    "tech",
+    "webdev"
   ],
-  "frontMatter.taxonomy.categories": [
-    "Fediverse"
-  ]
+  "frontMatter.taxonomy.categories": []
 }

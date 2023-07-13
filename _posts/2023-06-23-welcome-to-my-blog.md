@@ -2,6 +2,7 @@
 title: Welcome to my blog!
 layout: post
 date: "2023-06-23 11:51:01"
+tags: [blog, tech, webdev]
 ---
 
 Hello, I have decided to set up a blog on my website :)
