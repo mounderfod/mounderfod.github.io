@@ -39,6 +39,12 @@ marquee {
   width: 100%;
 }
 
+blockquote {
+  color: gray;
+  border-left: 5px solid gray;
+  padding-left: 15px;
+}
+
 #main {
   width: 100%;
   margin: auto;
@@ -81,11 +87,21 @@ marquee {
   padding: 0;
 }
 
+.box > ol {
+  color: black;
+  list-style-position: inside;
+  padding: 0;
+}
+
 .box > :is(p, h1, h2, h3, h4, h5, h6) {
   color: black;
 }
 
 .box > ul > li > :is(p, h1, h2, h3, h4, h5, h6) {
+  color: black;
+}
+
+.box > ol > li > :is(p, h1, h2, h3, h4, h5, h6) {
   color: black;
 }
 
