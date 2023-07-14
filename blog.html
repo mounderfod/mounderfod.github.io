@@ -4,9 +4,90 @@ title: Blog
 permalink: /blog/
 ---
 
-<a href="/feed.xml"><p>Click here for RSS feed</p></a>
+<h1 style="text-align: center">Blog</h1>
+<script type="text/javascript" src="../mentions.js"></script>
+
+<a href="/feed.xml" style="text-align: center"
+  ><p style="color: -webkit-link">Click here for RSS feed</p></a
+>
 {% for post in site.posts %}
 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-<p><em>{{post.date | date: "%-d %B %Y"}}</em></p>
+<p>
+  <svg
+    alt="date published"
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="gray"
+    class="bi bi-calendar-fill"
+    viewBox="0 0 16 16"
+  >
+    <path
+      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z"
+    />
+  </svg>
+  <em style="color: gray; padding-right: 1em"
+    >{{post.date | date: "%-d %B %Y"}}</em
+  >
+  <svg
+    alt="reading time"
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="gray"
+    class="bi bi-stopwatch-fill"
+    viewBox="0 0 16 16"
+  >
+    <path
+      d="M6.5 0a.5.5 0 0 0 0 1H7v1.07A7.001 7.001 0 0 0 8 16a7 7 0 0 0 5.29-11.584.531.531 0 0 0 .013-.012l.354-.354.353.354a.5.5 0 1 0 .707-.707l-1.414-1.415a.5.5 0 1 0-.707.707l.354.354-.354.354a.717.717 0 0 0-.012.012A6.973 6.973 0 0 0 9 2.071V1h.5a.5.5 0 0 0 0-1h-3zm2 5.6V9a.5.5 0 0 1-.5.5H4.5a.5.5 0 0 1 0-1h3V5.6a.5.5 0 1 1 1 0z"
+    />
+  </svg>
+  {% assign time = post.content | number_of_words: "auto" | divided_by: 238 %}
+  {% if time == 0 %}
+  <em style="color: gray; padding-right: 1em">Less than a minute</em>
+  {% elsif time == 1 %}
+  <em style="color: gray; padding-right: 1em">{{time}} minute</em>
+  {% else %}
+  <em style="color: gray; padding-right: 1em">{{time}} minutes</em>
+  {% endif %}
+  <svg
+    alt="interactions"
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="gray"
+    class="bi bi-chat-right-text-fill"
+    viewBox="0 0 16 16"
+  >
+    <path
+      d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM3.5 3h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z"
+    />
+  </svg>
+  <a
+    style="text-decoration: none"
+    href="https://webmention.io/api/mentions.html?token=LBBk4aar_MPltm9VG8bQTQ"
+    ><em style="color: gray" id="interactions"
+      ><span
+        data-webmention-count
+        data-url="https://www.mounderfod.online{{post.url | relative_url}}"
+      ></span> </em
+  ></a>
+</p>
 <p>{{ post.excerpt | truncatewords: 50 }}</p>
+<p>
+  <svg
+    alt="tags"
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="gray"
+    class="bi bi-tag-fill"
+    viewBox="0 0 16 16"
+  >
+    <path
+      d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+    />
+  </svg>
+  <em style="color: gray">{{post.tags | join: ", "}}</em>
+</p>
 {% endfor %}
