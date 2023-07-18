@@ -25,4 +25,5 @@ I primarily use the Fediverse:
 If you have any questions/messages:
 
 - **Discord**: @mounderfod
-- **Email**: mounderfod+website 〈at〉 gmail.com
+- **Email**: mounderfod+website〈at〉gmail.com
+
