@@ -13,14 +13,16 @@ programming and video games.
 
 **Languages I code in:** Python, JS, Java (and C# by extension), Rust
 
-## SOCIALS
+<h2 style="text-align: center;">Socials</h2>
 
 I primarily use the Fediverse:
 
 - [Lemmy](https://lemmy.sdf.org/u/mounderfod)
 - [Mastodon](https://mastodon.sdf.org/@mounderfod)
 - [Pixelfed](https://metapixl.com/i/web/profile/577395471914797016)
+- [GNU social](http://osli.rf.gd/mounderfod)
 
 If you have any questions/messages:
 
 - **Discord**: @mounderfod
+- **Email**: mounderfod+website 〈at〉 gmail.com
