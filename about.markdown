@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-# ABOUT
+<h1 style="align-text: center;">About</h1>
 
 Hello! :D My name is Noah, but I go by **mounderfod**. I am interested in music,
 programming and video games.
