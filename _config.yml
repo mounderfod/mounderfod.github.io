@@ -27,6 +27,8 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://mounderfod.online" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: mounderfod
 
+future: true
+
 # Build settings
 plugins:
   - jekyll-feed
