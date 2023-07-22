@@ -4,11 +4,12 @@ title: Blog
 permalink: /blog/
 ---
 
+<a href="/"><p>⟸ Back to homepage</p></a>
 <h1>Blog</h1>
 <script type="text/javascript" src="../mentions.js"></script>
 
 {% for post in site.posts %}
-<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 <p>
   <svg
     alt="date published"
@@ -90,5 +91,5 @@ permalink: /blog/
 {% endfor %}
 
 <a href="/feed.xml" style="text-align: center"
-  ><p style="color: -webkit-link">Click here for RSS feed</p></a
+  ><p>Click here for RSS feed</p></a
 >

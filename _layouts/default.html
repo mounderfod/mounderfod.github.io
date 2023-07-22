@@ -4,21 +4,43 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{{page.title}} - mounderfod</title>
-    <link rel="icon" type="image/png" href="/assets/img/planets/Planet-4.png">
-    <meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <meta
+      name="description"
+      content="{{ page.excerpt | strip_html | truncatewords: 50 }}"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/assets/index.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="/timedate.js"></script>
     <link rel="me" href="https://github.com/mounderfod" />
     <link rel="me" href="https://mastodon.sdf.org/@mounderfod" />
-    <span class="h-card" style="display: none;">
+    <span class="h-card" style="display: none">
       <p class="p-nickname">mounderfod</p>
       <p class="p-given-name">Noah</p>
       <a class="u-url" rel="me" href="https://mounderfod.online"></a>
       <p class="p-country-name">United Kingdom</p>
     </span>
-    <link rel="webmention" href="https://webmention.io/www.mounderfod.online/webmention" />
+    <link
+      rel="webmention"
+      href="https://webmention.io/www.mounderfod.online/webmention"
+    />
   </head>
   <body>
     <marquee
@@ -26,11 +48,6 @@
         The time is {} and the date is {}
       </p></marquee
     >
-    <div id="main">
-      <div class="logo-container">
-        <a href="/"><img class="logo" src="/assets/img/wordart.webp" /></a><br />
-      </div>
-      <div class="box">{{content}}</div>
-    </div>
+    <div id="main">{{content}}</div>
   </body>
 </html>

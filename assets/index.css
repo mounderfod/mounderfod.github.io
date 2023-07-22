@@ -1,10 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 html {
-  background-image: url(img/background.webp);
-  width: 100%;
-  color: white;
+  background-color: black;
+  padding-left: 25%;
+  padding-right: 25%;
+  color: lime;
 }
+
+@media only screen and (max-width: 900px) {
+  html {
+    padding-left: 5%;
+    padding-right: 5%
+  }
+}
+
+img {
+  transition:transform 0.25s ease;
+}
+
+img:hover {
+  -webkit-transform:scale(3); /* or some other value */
+  transform:scale(3);
+}
+
+h2 > a::before {
+  content: '> ';
+}
+
 p,
 h1,
 h2,
@@ -15,28 +37,16 @@ h6,
 li {
   font-family: "JetBrains Mono", monospace;
 }
-.field {
-  width: 20%;
-  display: inline-block;
-  padding-left: 4em;
-  padding-right: 4em;
-  text-align: center;
-}
-.field > img {
-  width: 5rem;
-  height: 5rem;
-}
-a {
-  color: -webkit-link;
-  text-decoration: underline wavy -webkit-link;
-}
 
-a > :is(p, h1, h2, h3, h4, h5, h6) {
-  color: -webkit-link;
+a {
+  color: lime;
+  text-decoration: underline dotted lime;
 }
 
 img {
-    max-width: 100%;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 marquee {
@@ -54,73 +64,14 @@ blockquote {
   margin: auto;
 }
 
-.logo-container {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 30%;
-  margin-bottom: 2em;
-}
-
-#container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.logo {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.box {
-  background-color: whitesmoke;
-  border: 5px solid darkcyan;
-  width: 80%;
-  margin: auto;
-  padding: 10px;
-  margin-bottom: 50px;
-}
-
-.box > ul {
-  color: black;
-  list-style-position: inside;
-  padding: 0;
-}
-
-.box > ol {
-  color: black;
-}
-
-.box > :is(p, h1, h2, h3, h4, h5, h6) {
-  color: black;
-}
-
-.box > * > :is(p, h1, h2, h3, h4, h5, h6) {
-  color: black;
-}
-
-.box > ul > li > :is(p, h1, h2, h3, h4, h5, h6) {
-  color: black;
-}
-
-.box > ol > li > :is(p, h1, h2, h3, h4, h5, h6) {
-  color: black;
+.title {
+  font-weight: 900;
 }
 
 pre,
 code {
-  color: limegreen;
-  background-color: black;
-}
-
-a > h2 {
-  color: white;
-  text-decoration: underline wavy white;
+  color: black;
+  background-color: lime;
 }
 
 pre {
@@ -129,12 +80,4 @@ pre {
 
 :not(pre) > code {
   padding: 5px;
-}
-
-@media screen and (max-width: 1110px) {
-  .field {
-    width: 100%;
-    display: block;
-    padding: 0;
-  }
 }

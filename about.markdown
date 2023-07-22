@@ -3,9 +3,9 @@ layout: default
 title: About
 permalink: /about/
 ---
+[⟸ Back to homepage](/)
 
 # About
-
 Hello! :D My name is Noah, but I go by **mounderfod**. I am interested in music,
 programming and video games.
 
@@ -26,3 +26,7 @@ If you have any questions/messages:
 - **Discord**: @mounderfod
 - **Email**: mounderfod+website〈at〉gmail.com
 
+## Using my stuff
+All the content of the website (unless explicitly stated otherwise) is CC-BY - basically, do whatever the fuck you want but credit me some(how/where).
+
+![CC-BY badge](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
