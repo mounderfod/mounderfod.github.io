@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta property="og:url" content="https://mounderfod.online" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home - mounderfod" />
+    <meta property="og:description" content="undefined" />
+    <meta
+      property="og:image"
+      content="https://cdn.discordapp.com/attachments/838048982873538572/1132359972165013534/image.png"
+    />
     <title>{{page.title}} - mounderfod</title>
     <link
       rel="apple-touch-icon"
@@ -21,10 +29,14 @@
       sizes="16x16"
       href="/assets/favicon-16x16.png"
     />
+    {% if page.layout == "post" %}
     <meta
       name="description"
       content="{{ page.excerpt | strip_html | truncatewords: 50 }}"
     />
+    {% else %}
+    <meta name="description" content="My little corner of the Internet." />
+    {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/assets/index.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
