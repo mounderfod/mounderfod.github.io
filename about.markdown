@@ -13,8 +13,7 @@ programming and video games.
 
 **Languages I code in:** Python, JS, Java (and C# by extension), Rust
 
-<h2 style="text-align: center;">Socials</h2>
-
+## Contact me
 I primarily use the Fediverse:
 
 - [Lemmy](https://lemmy.sdf.org/u/mounderfod)
