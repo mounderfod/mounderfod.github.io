@@ -6,7 +6,6 @@
     <meta property="og:url" content="https://mounderfod.online" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Home - mounderfod" />
-    <meta property="og:description" content="undefined" />
     <meta
       property="og:image"
       content="https://cdn.discordapp.com/attachments/838048982873538572/1132359972165013534/image.png"
@@ -34,8 +33,16 @@
       name="description"
       content="{{ page.excerpt | strip_html | truncatewords: 50 }}"
     />
+    <meta
+      property="og:description"
+      content="{{ page.excerpt | strip_html | truncatewords: 50 }}"
+    />
     {% else %}
     <meta name="description" content="My little corner of the Internet." />
+    <meta
+      property="og:description"
+      content="My little corner of the Internet."
+    />
     {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/assets/index.css" />
