@@ -29,4 +29,4 @@ If you have any questions/messages:
 ## Using my stuff
 All the content of the website (unless explicitly stated otherwise) is CC-BY - basically, do whatever the fuck you want but credit me some(how/where).
 
-![CC-BY badge](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
+<img class="no-grow" alt="CC-BY badge" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg">
