@@ -8,7 +8,7 @@ permalink: /
 
 My little corner of the internet.
 
-(mirrored at `gopher://sdf.org/users/mounderfod`)
+(mirrored at `gopher://tilde.institute/~mounderfod`)
 
 ## [About](/about)
 ## [Blog](/blog)
