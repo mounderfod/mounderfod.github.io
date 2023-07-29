@@ -12,3 +12,4 @@ My little corner of the internet.
 
 ## [About](/about)
 ## [Blog](/blog)
+## [Projects](/projects)
