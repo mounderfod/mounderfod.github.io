@@ -1,87 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta property="og:url" content="https://mounderfod.online" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Home - mounderfod" />
-    <meta
-      property="og:image"
-      content="https://cdn.discordapp.com/attachments/838048982873538572/1132359972165013534/image.png"
-    />
-    <title>{{page.title}} - mounderfod</title>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon-16x16.png"
-    />
-    {% if page.layout == "post" %}
-    <meta
-      name="description"
-      content="{{ page.excerpt | strip_html | truncatewords: 50 }}"
-    />
-    <meta
-      property="og:description"
-      content="{{ page.excerpt | strip_html | truncatewords: 50 }}"
-    />
-    {% else %}
-    <meta name="description" content="My little corner of the Internet." />
-    <meta
-      property="og:description"
-      content="My little corner of the Internet."
-    />
-    {% endif %}
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/assets/index.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="/timedate.js"></script>
-    <link rel="me" href="https://github.com/mounderfod" />
-    <link rel="me" href="https://mastodon.sdf.org/@mounderfod" />
-    <span class="h-card" style="display: none">
-      <p class="p-nickname">mounderfod</p>
-      <p class="p-given-name">Noah</p>
-      <a class="u-url" rel="me" href="https://mounderfod.online"></a>
-      <p class="p-country-name">United Kingdom</p>
-    </span>
-    <link
-      rel="webmention"
-      href="https://webmention.io/www.mounderfod.online/webmention"
-    />
-  </head>
-  <body>
-    <marquee
-      ><p id="timedate" style="font-size: x-large">
-        The time is {} and the date is {}
-      </p></marquee
-    >
-    <div id="main">{{content}}</div>
-  </body>
-  <hr style="margin-top: 5%;">
-  <footer>
-    <div>
-      <p style="color: gray;  margin-bottom: 0;"> === INDEPENDENT, TRACKERLESS AD === </p>
-        <iframe src="https://banner.tildeverse.org/work.php?ID=mounderfod" width="468" height="80" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" target="_blank"></iframe>
-      
-      </div>
-      <p style="color: gray;">
-        <a style="color: gray; text-decoration-color: gray" href="https://fediring.net/previous?host=mounderfod.online"><--</a>
-        <a style="color: gray; text-decoration-color: gray" href="https://fediring.net/">Fediring</a>
-        <a style="color: gray; text-decoration-color: gray" href="https://fediring.net/next?host=mounderfod.online">--></a>
-      </p>
-      <p style="color:gray">NO COOKIES, NO TRACKERS, NO BULLSHIT</p>
-      <p style="color: gray">(c) mounderfod 2023</p>
-  </footer>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta property="og:url" content="https://mounderfod.online" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Home - mounderfod" />
+  <meta property="og:image"
+    content="https://cdn.discordapp.com/attachments/838048982873538572/1132359972165013534/image.png" />
+  <title>{{page.title}} - mounderfod</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+  {% if page.layout == "post" %}
+  <meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}" />
+  <meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}" />
+  {% else %}
+  <meta name="description" content="My little corner of the Internet." />
+  <meta property="og:description" content="My little corner of the Internet." />
+  {% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/index.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="/timedate.js"></script>
+  <link rel="me" href="https://github.com/mounderfod" />
+  <link rel="me" href="https://mastodon.sdf.org/@mounderfod" />
+  <span class="h-card" style="display: none">
+    <p class="p-nickname">mounderfod</p>
+    <p class="p-given-name">Noah</p>
+    <a class="u-url" rel="me" href="https://mounderfod.online"></a>
+    <p class="p-country-name">United Kingdom</p>
+  </span>
+  <link rel="webmention" href="https://webmention.io/www.mounderfod.online/webmention" />
+</head>
+
+<body>
+  <marquee>
+    <p id="timedate" style="font-size: x-large">
+      The time is {} and the date is {}
+    </p>
+  </marquee>
+  <div id="main">{{content}}</div>
+</body>
+<hr style="margin-top: 5%;">
+<footer>
+  <div>
+    <p style="color: gray;  margin-bottom: 0;"> === INDEPENDENT, TRACKERLESS AD === </p>
+    <iframe src="https://banner.tildeverse.org/work.php?ID=mounderfod" width="468" height="80" marginwidth="0"
+      marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" target="_blank"></iframe>
+
+  </div>
+  <p style="color: gray;">
+    <a style="color: gray; text-decoration-color: gray"
+      href="https://fediring.net/previous?host=mounderfod.online">&lt;==</a>
+
+    <a style="color: gray; text-decoration-color: gray" href="https://fediring.net/">Fediring</a>
+
+    <a style="color: gray; text-decoration-color: gray"
+      href="https://fediring.net/next?host=mounderfod.online">==&gt;</a>
+  </p>
+
+  <img src="https://88by31.neocities.org/music/explicitcontent.png">
+  <img src="https://anlucas.neocities.org/got_html.gif">
+  <img src="https://88by31.neocities.org/web/firefox.gif">
+  <img src="https://88by31.neocities.org/web/lin1.png">
+
+  <p style="color:gray">NO COOKIES, NO TRACKERS, NO BULLSHIT</p>
+  <p style="color: gray">(c) mounderfod 2023</p>
+</footer>
+
 </html>
