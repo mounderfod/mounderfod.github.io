@@ -20,7 +20,7 @@ footer {
   margin-bottom: 5%;
 }
 
-h2 > a::before {
+h2>a::before {
   content: '> ';
 }
 
@@ -41,9 +41,9 @@ a {
 }
 
 img {
-    max-width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 marquee {
@@ -75,6 +75,15 @@ pre {
   padding: 5px;
 }
 
-:not(pre) > code {
+:not(pre)>code {
   padding: 5px;
+}
+
+iframe {
+  width: 100%;
+}
+
+table>tbody>tr>td>a>img {
+  width: 70%;
+  height: auto;
 }
