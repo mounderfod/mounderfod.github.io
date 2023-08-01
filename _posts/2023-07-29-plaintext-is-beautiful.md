@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Plaintext is Beautiful
-date: 2023-07-18T09:27:00Z
+date: 2023-07-29T13:38:00Z
 tags: [webdev, text editor, development, gopher]
 ---
 
