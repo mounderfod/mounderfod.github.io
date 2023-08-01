@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Links
-permalink: /links
+permalink: /links/
 ---
 [⟸ Back to homepage](/)
 
