@@ -4,8 +4,6 @@ title: Home
 permalink: /
 ---
 
-# mounderfod
-
 My little corner of the internet.
 
 (mirrored at `gopher://tilde.institute/~mounderfod`)

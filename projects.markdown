@@ -5,13 +5,13 @@ permalink: /projects/
 ---
 [⟸ Back to homepage](/)
 
+# Projects
 ## Honor Oak
 Slightly strange electronic/indie music.
 
-[> (bandcamp - DRM-free downloads)](https://honoroak.bandcamp.com)
+[> (bandcamp - DRM-free downloads)](https://honoroak.bandcamp.com)<br>
 [> (other links)](https://linktr.ee/honor_oak)
 
-# Projects
 ## OSLI
 An organisation that I am running to provide various services for individuals on the Internet.<br>
 I hope to set it up as a tilde-style public Unix system soon.
