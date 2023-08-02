@@ -14,7 +14,9 @@ side effect of the game's simplicity is that game masters have a lot more work t
 for their players - **this is intentional**, and if that doesn't sound like your thing then musi supa pona
 is not the game for you.
 
-## [manual (PDF)](/assets/MSP%20Manual%20v1.0.0.pdf)
+<iframe src="https://itch.io/embed/2201114?bg_color=000000&amp;fg_color=00ff00&amp;link_color=00ff00&amp;border_color=333333" width="552" height="167" frameborder="0"><a href="https://craftvoltage.itch.io/msp">musi supa pona by CraftVoltage</a></iframe>
+
+## [manual (PDF)](/assets/MSP%20Manual%20v1.1.0.pdf)
 ## [manual (HTML)](/msp/manual/)
-## [manual (plain text)](/assets/MSP%20Manual%20v1.0.0.txt)
+## [manual (plain text)](/assets/MSP%20Manual%20v1.1.0.txt)
 ## [character sheet](/assets/Sheet.pdf)

@@ -36,6 +36,12 @@ _________________
 .. 5.2 Next Steps for Game Masters
 .. 5.3 Credits
 .. 5.4 Sharing this Document
+6 Blank Character Sheet
+7 Quick Cheat Sheet
+..... 7.0.1 Character
+..... 7.0.2 Rest
+..... 7.0.3 Battle
+..... 7.0.4 Currency
 
 
 
@@ -125,11 +131,10 @@ _________________
   weight in grams, and the maximum quantity that a character can carry
   in their inventory is determined by the formula:
 
-  $$ w = s * 1.5 * 500 $$
+  $$ w = (20 + s) * 1.5 * 500 $$
 
-  with $s$ representing the character's *Strength* statistic.
-
-  For more information about the contents of an Inventory, see [Items].
+  ...with $s$ representing the character's *Strength* statistic. For
+  more information about the contents of an Inventory, see [Items].
 
 
 [Items] See section 3
@@ -177,7 +182,7 @@ _________________
 
   The character sheet is used to contain all of the details regarding a
   musi supa pona character. A blank one may be seen at
-  [https://mounderfod.online/msp/character_sheet], and players or game
+  [https://www.mounderfod.online/assets/Sheet.pdf], and players or game
   masters may create their own based on this template.
 
 
@@ -348,6 +353,56 @@ _________________
   This document is licensed under the Creative Commons Attribution 4.0
   license (CC-BY).  You may do whatever you wish with this document, as
   long as you give proper attribution to its source (i.e. us).
+
+
+6 Blank Character Sheet
+=======================
+
+  [./Sheet.png]
+
+
+7 Quick Cheat Sheet
+===================
+
+7.0.1 Character
+---------------
+
+  - *Obtaining Statistics*: d20 - 2d6
+
+  - *Experience Levels*: for level $x$, total points required = $10^x$
+
+  - *Health Points*: equal to 20 + *Defence*
+
+  - *Disaster Rolls*: roll 3d20, must be greater than 30
+
+  - *Maximum Inventory Weight*: $(20 + s) * 1.5 * 500$, where $s$ is
+     equal to *Strength*
+
+
+7.0.2 Rest
+----------
+
+  - *Short Rest*: 1 turn missed, 5 health points
+
+  - *Long Rest*: 3 turns missed, all health points
+
+
+7.0.3 Battle
+------------
+
+  - *Battle Turn*: all roll d6, lowest to highest, use *Speed* if
+     conflicting
+
+  - *Attack*: both roll d6, successful if attacker result is greater; if
+    defender result is exactly double then defender gets extra turn
+
+
+7.0.4 Currency
+--------------
+
+  - 1 silver = 10 copper
+  - 1 gold = 50 silver = 500 copper
+  - 1 platinum = 100 gold = 5000 silver = 50000 copper
 
 
 
