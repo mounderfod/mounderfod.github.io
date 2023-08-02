@@ -6,6 +6,11 @@ permalink: /projects/
 [⟸ Back to homepage](/)
 
 # Projects
+## musi supa pona
+A simplistic tabletop role playing game (TTRPG) inspired by 5th edition Dungeons & Dragons.
+
+[> (details)](/msp)
+
 ## Honor Oak
 Slightly strange electronic/indie music.
 

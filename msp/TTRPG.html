@@ -1,0 +1,690 @@
+---
+layout: default
+title: MSP Manual v1.0.0
+permalink: /msp/manual/
+---
+
+<style type="text/css">
+  <!--/*
+  -->
+<![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<div id="content">
+  <h1 class="title">musi supa pona v1.0.0
+    <br />
+    <span class="subtitle">Manual for Players and Game Masters</span>
+  </h1>
+  <div id="table-of-contents">
+    <h2>Table of Contents</h2>
+    <div id="text-table-of-contents">
+      <ul>
+        <li><a href="#orge465d0f">1. Preamble</a></li>
+        <li><a href="#orgec83fd3">2. Characters</a>
+          <ul>
+            <li><a href="#org5cc875e">2.1. Character Stats</a>
+              <ul>
+                <li><a href="#orgc91eb68">2.1.1. Calculating Stats</a></li>
+              </ul>
+            </li>
+            <li><a href="#orgeb1415d">2.2. Other Character Information</a>
+              <ul>
+                <li><a href="#org3e1f05d">2.2.1. Name</a></li>
+                <li><a href="#org122d7ea">2.2.2. Background</a></li>
+                <li><a href="#org8c3213c">2.2.3. Inventory</a></li>
+                <li><a href="#orgc5d0f0e">2.2.4. Health Points and Disaster Rolls</a></li>
+                <li><a href="#orgeffa5b0">2.2.5. Experience</a></li>
+                <li><a href="#org1624f16">2.2.6. Notes</a></li>
+              </ul>
+            </li>
+            <li><a href="#org7d4f533">2.3. The Character Sheet</a></li>
+          </ul>
+        </li>
+        <li><a href="#org791d508">3. Items</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#orga5ffd95">3.0.1. Equipment</a></li>
+                <li><a href="#org1851f17">3.0.2. Food</a></li>
+                <li><a href="#orgfb5e1ff">3.0.3. Currency</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#org2236d35">4. The Structure of Play</a>
+          <ul>
+            <li><a href="#orgd74814a">4.1. Actions</a></li>
+            <li><a href="#org2084bd3">4.2. Battle</a></li>
+            <li><a href="#orgf7348ae">4.3. Movement</a></li>
+            <li><a href="#org8365758">4.4. Resting</a></li>
+          </ul>
+        </li>
+        <li><a href="#orgf172b84">5. Postamble</a>
+          <ul>
+            <li><a href="#org0d81d8b">5.1. Next Steps for Players</a></li>
+            <li><a href="#orga4b807a">5.2. Next Steps for Game Masters</a></li>
+            <li><a href="#org11a335d">5.3. Credits</a></li>
+            <li><a href="#orgea9369f">5.4. Sharing this Document</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="outline-container-orge465d0f" class="outline-2">
+    <h2 id="orge465d0f"><span class="section-number-2">1</span> Preamble</h2>
+    <div class="outline-text-2" id="text-1">
+      <p>
+        <b>musi supa pona</b> <i>(toki pona for "simple table game")</i> is a simplistic tabletop
+        role playing game (TTRPG) inspired by 5th edition Dungeons &amp; Dragons. The game
+        aims to abstract much of the features of a TTRPG in order to give more power to
+        the game master and their storytelling as opposed to complex game mechanics as
+        seen in other entertaining, but difficult to pick up, tabletop games.
+        The side effect of the game's simplicity is that game masters have a lot more work
+        to do in creating content for their players - <b>this is intentional</b>, and if that
+        doesn't sound like your thing then musi supa pona is not the game for you.
+      </p>
+
+      <p>
+        This manual serves as a guide for both players and game masters alike; due to the
+        game's relative simplicity it is possible to contain all information about the game
+        into one document. Additional information and resources can be found at
+        <a href="https://mounderfod.online/msp">https://mounderfod.online/msp</a>.
+      </p>
+    </div>
+  </div>
+  <div id="outline-container-orgec83fd3" class="outline-2">
+    <h2 id="orgec83fd3"><span class="section-number-2">2</span> Characters</h2>
+    <div class="outline-text-2" id="text-2">
+      <p>
+        One of the key aspects of musi supa pona, as with many TTRPGs, is the character.
+        The game character is the way in which the real world player interacts with the
+        internal world of the game, and as such, great importance is put into the
+        character in musi supa pona.
+      </p>
+    </div>
+
+    <div id="outline-container-org5cc875e" class="outline-3">
+      <h3 id="org5cc875e"><span class="section-number-3">2.1</span> Character Stats</h3>
+      <div class="outline-text-3" id="text-2-1">
+        <p>
+          The most important part of a character is their in-game stats. These are used
+          to determine various parts of the game using dice rolls. Each statistic is a
+          positive or negative number which represents how a d20<sup><a id="fnr.1" class="footref"
+              href="#fn.1">1</a></sup>'s
+          output will be modified (similar to DnD). The statistics are as follows:
+        </p>
+
+        <ul class="org-ul">
+          <li><b>Strength</b>: A character's physical capabilites.</li>
+          <li><b>Intelligence</b>: A character's ability to be observant of the world around them
+            and interpret and work with complex ideas.</li>
+          <li><b>Speed</b>: A character's agility of movement.</li>
+          <li><b>Defence</b>: A character's ability to deal with injury.</li>
+          <li><b>Charisma</b>: A character's ability to manipulate or otherwise convince those
+            around them.</li>
+        </ul>
+      </div>
+
+      <div id="outline-container-orgc91eb68" class="outline-4">
+        <h4 id="orgc91eb68"><span class="section-number-4">2.1.1</span> Calculating Stats</h4>
+        <div class="outline-text-4" id="text-2-1-1">
+          <p>
+            Each statistic is calculated by rolling a d20 and 2d6.
+            The sum of the 2d6 is subtracted from the d20, allowing for a maximum stat of +18
+            and a minimum of -11.
+          </p>
+
+          <p>
+            This should be calculated before a session begins, when the character is created.
+            It may only be done once in the creation of a character, and you cannot reroll
+            unless given permission by the game master.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="outline-container-orgeb1415d" class="outline-3">
+      <h3 id="orgeb1415d"><span class="section-number-3">2.2</span> Other Character Information</h3>
+      <div class="outline-text-3" id="text-2-2">
+      </div>
+      <div id="outline-container-org3e1f05d" class="outline-4">
+        <h4 id="org3e1f05d"><span class="section-number-4">2.2.1</span> Name</h4>
+        <div class="outline-text-4" id="text-2-2-1">
+          <p>
+            The character's name. Make this anything you like.
+          </p>
+        </div>
+      </div>
+
+      <div id="outline-container-org122d7ea" class="outline-4">
+        <h4 id="org122d7ea"><span class="section-number-4">2.2.2</span> Background</h4>
+        <div class="outline-text-4" id="text-2-2-2">
+          <p>
+            The character's race, character class,
+            alignment<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>,
+            and occupation. By default this has noeffect on gameplay, but at the game master's
+            discretion, the character class may influence a character's e.g. equipment, and
+            similarly a player may choose to make decisions that are influenced by the
+            character's background.
+          </p>
+        </div>
+      </div>
+
+      <div id="outline-container-org8c3213c" class="outline-4">
+        <h4 id="org8c3213c"><span class="section-number-4">2.2.3</span> Inventory</h4>
+        <div class="outline-text-4" id="text-2-2-3">
+          <p>
+            The items that the character is carrying with them.
+            Every item has a weight in grams, and the maximum quantity that a character can
+            carry in their inventory is determined by the formula:
+          </p>
+
+          <p>
+            \[ w = s * 1.5 * 500 \]
+          </p>
+
+          <p>
+            with \(s\) representing the character's <b>Strength</b> statistic.
+          </p>
+
+          <p>
+            For more information about the contents of an Inventory, see <a href="#org791d508">Items</a>.
+          </p>
+        </div>
+      </div>
+
+      <div id="outline-container-orgc5d0f0e" class="outline-4">
+        <h4 id="orgc5d0f0e"><span class="section-number-4">2.2.4</span> Health Points and Disaster Rolls</h4>
+        <div class="outline-text-4" id="text-2-2-4">
+          <p>
+            A character has a set number of health points, which is equal to 20 plus the
+            character's <b>Defence</b> statistic.
+          </p>
+
+          <p>
+            If the character's health reaches 0 as a result of damage, the player must roll
+            3d20 as disaster rolls. If the sum of the rolls is more than 30, the character's health is increased
+            to 1 and the character is unable to attack or defend themselves unless their
+            health increases (if the character's health is 1 for other reasons, this rule
+            does not apply). If the sum is less than 30, the character dies and can no longer
+            be used in the current session (the game master can decide how to proceed in future
+            sessions).
+          </p>
+        </div>
+      </div>
+
+      <div id="outline-container-orgeffa5b0" class="outline-4">
+        <h4 id="orgeffa5b0"><span class="section-number-4">2.2.5</span> Experience</h4>
+        <div class="outline-text-4" id="text-2-2-5">
+          <p>
+            A character has experience points corresponding to experience levels.
+            Experience points may be granted at the game master's discretion.
+            To level up, the player must accumulate:
+          </p>
+
+          <ul class="org-ul">
+            <li>Level 1: 10 points total</li>
+            <li>Level 2: 100 points total</li>
+            <li>Level 3: 1000 points total</li>
+          </ul>
+
+          <p>
+            etc.
+          </p>
+        </div>
+      </div>
+
+      <div id="outline-container-org1624f16" class="outline-4">
+        <h4 id="org1624f16"><span class="section-number-4">2.2.6</span> Notes</h4>
+        <div class="outline-text-4" id="text-2-2-6">
+          <p>
+            A blank space for lore or any other information relevant to the character.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="outline-container-org7d4f533" class="outline-3">
+      <h3 id="org7d4f533"><span class="section-number-3">2.3</span> The Character Sheet</h3>
+      <div class="outline-text-3" id="text-2-3">
+        <p>
+          The character sheet is used to contain all of the details regarding a musi supa
+          pona character. A blank one may be seen at
+          <a href="https://mounderfod.online/msp/character_sheet">https://mounderfod.online/msp/character_sheet</a>, and
+          players or game masters
+          may create their own based on this template.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="outline-container-org791d508" class="outline-2">
+    <h2 id="org791d508"><span class="section-number-2">3</span> Items</h2>
+    <div class="outline-text-2" id="text-3">
+      <p>
+        Generally, items and their properties are determined by the game master, but
+        there are some special cases:
+      </p>
+    </div>
+
+    <div id="outline-container-orga5ffd95" class="outline-4">
+      <h4 id="orga5ffd95"><span class="section-number-4">3.0.1</span> Equipment</h4>
+      <div class="outline-text-4" id="text-3-0-1">
+        <p>
+          Equipment refers to any item that is actively used by a character to perform an
+          action. A character should have starting equipment, though what this is should
+          be decided between the player and the game master, taking into account the player's
+          background, etc.
+        </p>
+      </div>
+    </div>
+
+    <div id="outline-container-org1851f17" class="outline-4">
+      <h4 id="org1851f17"><span class="section-number-4">3.0.2</span> Food</h4>
+      <div class="outline-text-4" id="text-3-0-2">
+        <p>
+          Food items heal a set number of health points for a character.
+          Some food items can be consumed only once, while others can be eaten in multiple
+          pieces. This is decided by the game master.
+        </p>
+      </div>
+    </div>
+
+    <div id="outline-container-orgfb5e1ff" class="outline-4">
+      <h4 id="orgfb5e1ff"><span class="section-number-4">3.0.3</span> Currency</h4>
+      <div class="outline-text-4" id="text-3-0-3">
+        <p>
+          musi supa pona has its own custom currency system. In short, it works as follows:
+        </p>
+
+        <ul class="org-ul">
+          <li>The base unit is copper</li>
+          <li>1 silver = 10 copper</li>
+          <li>1 gold = 50 silver = 500 copper</li>
+          <li>1 platinum = 100 gold = 5000 silver = 50000 copper</li>
+        </ul>
+
+        <p>
+          Every character starts with a currency bag (50g empty), and can store up to 15 of
+          each type of coin (8g each) - a full currency bag weighs 480g.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="outline-container-org2236d35" class="outline-2">
+    <h2 id="org2236d35"><span class="section-number-2">4</span> The Structure of Play</h2>
+    <div class="outline-text-2" id="text-4">
+      <p>
+        The game loop of musi supa pona is simple, and largely the same as Dungeons and
+        Dragons.
+      </p>
+
+      <ol class="org-ol">
+        <li>The game master describes the scenario in which the characters are found.</li>
+        <li>The game master will ask one player (by convention, the one to their left, but it
+          doesn't matter) what they are going to do. If the player desires to perform an <b>action</b>,
+          the dice are rolled, and the game master describes the result of the action.</li>
+        <li>The game master repeats this for every player at the table, then repeats the
+          whole thing again.</li>
+      </ol>
+    </div>
+
+    <div id="outline-container-orgd74814a" class="outline-3">
+      <h3 id="orgd74814a"><span class="section-number-3">4.1</span> Actions</h3>
+      <div class="outline-text-3" id="text-4-1">
+        <p>
+          Actions are any thing that a character can do that involves one of their statistics.
+          Unlike Dungeons and Dragons, musi supa pona does not feature sub-statistics in the form
+          of skills<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>
+          and only the base ones are used. For each action, the game master will
+          declare which skill is involved and a d20 is rolled, adding the modifier listed
+          on the character sheet to the result. Without telling the player, the
+          game master will determine the minimum (or maximum) result needed for the action
+          to be successful.
+        </p>
+      </div>
+    </div>
+
+    <div id="outline-container-org2084bd3" class="outline-3">
+      <h3 id="org2084bd3"><span class="section-number-3">4.2</span> Battle</h3>
+      <div class="outline-text-3" id="text-4-2">
+        <p>
+          A core part of gameplay is battle, when the characters are confronted with
+          enemies to defeat. Battle works as follows:
+        </p>
+
+        <ol class="org-ol">
+          <li>Every character's player rolls a d6, and the game master rolls a d6
+            for every NPC involved. This determines the turn order (from lowest to highest).
+            If two participants roll the same number, the one with the greatest <b>Speed</b>
+            statistic goes first (NPCs have no speed statistic and so for this purpose
+            it is 0).</li>
+          <li>On their turn, each player (or NPC, controlled by the game master) picks
+            which enemy their character is going to attack. Their turn can alternatively
+            be used to perform a non-battle action (such as using an item to heal a friend).</li>
+          <li>If attacking, both the character's player and the enemy's controller (i.e. the
+            game master) roll a d6 dice. The attack is successful if the attacker's result
+            is greater than the defender's result. If the defender's result is exactly twice
+            that of the attacker, then the defender gets an extra turn just after the
+            attacker's turn.</li>
+          <li>This repeats for every player and NPC until either there are no more enemies or
+            all the player characters have died.</li>
+        </ol>
+
+        <p>
+          The effect of the attack is determined by the equipment the character has
+          (and ultimately, the game master).
+        </p>
+      </div>
+    </div>
+
+    <div id="outline-container-orgf7348ae" class="outline-3">
+      <h3 id="orgf7348ae"><span class="section-number-3">4.3</span> Movement</h3>
+      <div class="outline-text-3" id="text-4-3">
+        <p>
+          It is assumed that all characters will move between actions at the same speed, for
+          simplicity and to reduce the amount of calculation required from the game master.
+          If the game master wishes to implement a more specific movement system, they are
+          welcome to do so.
+        </p>
+      </div>
+    </div>
+
+    <div id="outline-container-org8365758" class="outline-3">
+      <h3 id="org8365758"><span class="section-number-3">4.4</span> Resting</h3>
+      <div class="outline-text-3" id="text-4-4">
+        <p>
+          At any point, characters may choose to rest:
+        </p>
+
+        <ul class="org-ul">
+          <li><b>Short Rest</b>: The player does not get a turn in the next round of actions. Instead,
+            the player will regain 5 health points.</li>
+          <li><b>Long Rest</b>: The player does not get a turn in the next three rounds of actions.
+            Instead, the player will regain all of their health points.</li>
+        </ul>
+
+        <p>
+          The way in which the passage of time is handled and how it interacts with rest
+          is up to the game master; they may choose to have a day/night cycle with
+          characters resting at night or to just have a constant linear session, with
+          characters resting during gameplay as described above.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="outline-container-orgf172b84" class="outline-2">
+    <h2 id="orgf172b84"><span class="section-number-2">5</span> Postamble</h2>
+    <div class="outline-text-2" id="text-5">
+    </div>
+    <div id="outline-container-org0d81d8b" class="outline-3">
+      <h3 id="org0d81d8b"><span class="section-number-3">5.1</span> Next Steps for Players</h3>
+      <div class="outline-text-3" id="text-5-1">
+        <p>
+          Find a game master and other players to have a session with, create a character
+          and have fun!
+        </p>
+      </div>
+    </div>
+
+    <div id="outline-container-orga4b807a" class="outline-3">
+      <h3 id="orga4b807a"><span class="section-number-3">5.2</span> Next Steps for Game Masters</h3>
+      <div class="outline-text-3" id="text-5-2">
+        <p>
+          You should create some content for your next session or campaign. It may be useful
+          to include:
+        </p>
+
+        <ul class="org-ul">
+          <li>Details about places in the in-game world (e.g. towns, villages, forests)</li>
+          <li>A preset list of common items in the in-game world (weapons, armor, etc.)</li>
+          <li>A preset list of common creatures, their actions, their attacks and their
+            health points</li>
+          <li>Some prepared dungeons, quests and adventures</li>
+        </ul>
+
+        <p>
+          If you don't want to come up with all of this yourself, you can borrow content and
+          ideas from other musi supa pona game masters or other TTRPGs. Alternatively, you
+          may want to consider playing a less abstract TTRPG.
+        </p>
+      </div>
+    </div>
+
+    <div id="outline-container-org11a335d" class="outline-3">
+      <h3 id="org11a335d"><span class="section-number-3">5.3</span> Credits</h3>
+      <div class="outline-text-3" id="text-5-3">
+        <p>
+          This TTRPG is heavily inspired by Dungeons and Dragons, designed by Gary Gygax and
+          Dave Arneson in 1974.
+        </p>
+      </div>
+    </div>
+
+    <div id="outline-container-orgea9369f" class="outline-3">
+      <h3 id="orgea9369f"><span class="section-number-3">5.4</span> Sharing this Document</h3>
+      <div class="outline-text-3" id="text-5-4">
+        <p>
+          This document is licensed under the Creative Commons Attribution 4.0 license (CC-BY).
+          You may do whatever you wish with this document, as long as you give proper
+          attribution to its source (i.e. us).
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="footnotes">
+    <h2 class="footnotes">Footnotes: </h2>
+    <div id="text-footnotes">
+
+      <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup>
+        <div class="footpara">a dice with 20 sides</div>
+      </div>
+
+      <div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup>
+        <div class="footpara">(lawful/neutral/chaotic)(good/neutral/evil)</div>
+      </div>
+
+      <div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup>
+        <div class="footpara">e.g. Animal Handling, etc.</div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<div id="postamble" class="status">
+  <p class="author">Author: mounderfod</p>
+  <p class="date">Created: 2023-08-02 Wed 13:21</p>
+  <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
