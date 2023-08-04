@@ -12,6 +12,8 @@ Various cool stuff I've found on the Internet
 - [Comfitu.re](https://comfitu.re/) (I really like the design of this page)
 - [houl@floof](https://houl.floof.company/) (another really nice design)
 - [MystSaphyr](https://mystsaphyr.me/) (lovely site, though sadly many of the buttons in their collection aren't working)
+- [fkfd](https://fkfd.me/) (like xkcd but even more niche, very cool)
+- [Mew151](https://mew151.net) (90s Windows, is that you?)
 
 ## Smolnet resources
 - [Cool Capsule of the Week](https://dj-chase.com/documents/cap-of-week/) (a nice way of finding cool Gemini capsules)
