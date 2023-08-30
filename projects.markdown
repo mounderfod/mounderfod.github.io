@@ -7,16 +7,16 @@ permalink: /projects/
 
 # Projects
 
-<div class="project">
+<span class="project">
   
 ## musi supa pona
 A simplistic tabletop role playing game (TTRPG) inspired by 5th edition Dungeons & Dragons.
 
 [> (details)](/msp)
 
-</div>
+</span>
 
-<div class="project">
+<span class="project">
   
 ## Honor Oak
 Slightly strange electronic/indie music.
@@ -24,19 +24,19 @@ Slightly strange electronic/indie music.
 [> (bandcamp - DRM-free downloads)](https://honoroak.bandcamp.com)<br>
 [> (other links)](https://linktr.ee/honor_oak)
 
-</div>
+</span>
 
-<div class="project">
+<span class="project">
   
 ## OSLI
-An organisation that I am running to provide various services for individuals on the Internet.<br>
+An organisation that I am running to provide various services for inspaniduals on the Internet.<br>
 I hope to set it up as a tilde-style public Unix system soon.
 
 [> (website)](https://osli-internet.github.io)
 
-</div>
+</span>
 
-<div class="project">
+<span class="project">
   
 ## Nucleoid
 An open-source minigames server for Minecraft.<br>
@@ -44,9 +44,9 @@ I've been the Community Manager since 2021 for this project.
 
 [> (website)](https://nucleoid.xyz)
 
-</div>
+</span>
 
-<div class="project">
+<span class="project">
   
 ## Glowsquid
 A fast, modern Minecraft launcher.<br>
@@ -54,4 +54,4 @@ This is still in development but I'm doing a bunch of frontend work right now.
 
 [> (Discord server)](https://discord.gg/AzwR4KSJW4)
 
-</div>
+</span>
