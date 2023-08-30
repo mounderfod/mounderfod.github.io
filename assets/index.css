@@ -4,7 +4,7 @@ html {
   background-color: black;
   padding-left: 25%;
   padding-right: 25%;
-  color: lime;
+  color: orange;
 }
 
 @media only screen and (max-width: 900px) {
@@ -36,8 +36,8 @@ li {
 }
 
 a {
-  color: lime;
-  text-decoration: underline dotted lime;
+  color: orange;
+  text-decoration: underline dotted orange;
 }
 
 img {
@@ -68,7 +68,7 @@ blockquote {
 pre,
 code {
   color: black;
-  background-color: lime;
+  background-color: orange;
 }
 
 pre {
