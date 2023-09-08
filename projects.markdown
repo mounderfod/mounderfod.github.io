@@ -7,22 +7,11 @@ permalink: /projects/
 
 # Projects
   
-## musi supa pona
-A simplistic tabletop role playing game (TTRPG) inspired by 5th edition Dungeons & Dragons.
-
-[> (details)](/msp)
-  
 ## Honor Oak
 Slightly strange electronic/indie music.
 
 [> (bandcamp - DRM-free downloads)](https://honoroak.bandcamp.com)<br>
 [> (other links)](https://linktr.ee/honor_oak)
-  
-## OSLI
-An organisation that I am running to provide various services for inspaniduals on the Internet.<br>
-It also has a tilde-style public Unix system.
-
-[> (website)](https://tilde.mounderfod.online)
   
 ## Nucleoid
 An open-source minigames server for Minecraft.<br>
